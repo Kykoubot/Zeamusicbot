@@ -4,13 +4,13 @@
     A Telegram Music+video Bot written in Python using Pyrogram and Py-Tgcalls 
 </h4>
 <p align="center">
-    <a href="https://t.me/YukkiRobot"> Ready-To-Use Bot </a> •
+    <a href="https://t.me/zeamusicuser_bot"> Ready-To-Use Bot </a> •
     <a href="https://notreallyshikhar.gitbook.io/yukkimusicbot/about/getting-started"> Documentation </a> •
-    <a href="https://t.me/OfficialYukki"> Support Channel </a> •
-    <a href="https://t.me/YukkiSupport"> Support Chat </a> 
+    <a href="https://t.me/Storezeastore"> Support Channel </a> •
+    <a href="https://t.me/dbzea"> Support Chat </a> 
 </p>
     
-# Yukki Music Bot
+# Zebo Music Bot
 A Powerful Telegram Music+Video Bot by which you can stream songs, videos and even live streams in your group calls via various sources. It comes with  user friendly and easy to use yet elegant features.
 
 ## Deployment
@@ -52,7 +52,7 @@ Read [Docs](https://notreallyshikhar.gitbook.io/yukkimusicbot/deployment/require
 > By setting those two vars you can get logs of your heroku app, set var, edit var, delete vars , check dyno usage and update bot. 
 > Those two vars are not Mandatory! You can leave them blank too. 
     
-<h4>Click the button below to deploy Yukki on Heroku!</h4>    
+<h4>Click the button below to deploy Zebo on Heroku!</h4>    
 <p><a href="https://vegetaxd.me/Yukki"><img src="https://img.shields.io/badge/Deploy%20To%20Heroku-blueviolet?style=for-the-badge&logo=heroku" width="200""/></a></p>
     
 </details>
