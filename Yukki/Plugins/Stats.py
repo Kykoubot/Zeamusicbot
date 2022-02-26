@@ -194,7 +194,7 @@ async def stats_markup(_, CallbackQuery):
 
 **Mongo Uptime:** {mongouptime[:4]} Days
 **Version:** {mver}
-**Database:** {database}
+**Database:** Zeasan
 **Provider:** {provider}
 **DB Size:** {datasize[:6]} Mb
 **Storage:** {storage} Mb
@@ -213,7 +213,7 @@ async def stats_markup(_, CallbackQuery):
         smex = f"""
 [•]<u>General Stats</u>
 
-**Ping:** `⚡{resp} ms`
+**Ping:** `✨{resp} ms`
 {uptime}"""
         await CallbackQuery.edit_message_text(smex, reply_markup=stats1)
     if command == "wait_stats":
