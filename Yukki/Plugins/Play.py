@@ -32,14 +32,6 @@ from Yukki.Utilities.youtube import (get_yt_info_id, get_yt_info_query,
 
 loop = asyncio.get_event_loop()
 
-JOIN_ASAP = f"👋𝘏𝘢𝘭𝘰 𝘶𝘯𝘵𝘶𝘬 𝘮𝘦𝘯𝘨𝘩𝘪𝘯𝘥𝘢𝘳𝘪 𝘴𝘱𝘢𝘮 𝘭𝘢𝘨𝘶 𝘺𝘢𝘯𝘨 𝘣𝘦𝘳𝘭𝘦𝘣𝘪𝘩𝘢𝘯 𝘬𝘢𝘮𝘶 𝘥𝘪 𝘬𝘩𝘶𝘴𝘶𝘴𝘬𝘢𝘯 𝘫𝘰𝘪𝘯 𝘵𝘦𝘳𝘭𝘦𝘣𝘪𝘩 𝘥𝘢𝘩𝘶𝘭𝘶.."
-
-FSUBB = InlineKeyboardMarkup(
-        [[
-        InlineKeyboardButton(text="ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/storezeastore") 
-        ]]
-    )
-
 @app.on_message(
     filters.command(["play", f"play@{BOT_USERNAME}"]) & filters.group
 )
