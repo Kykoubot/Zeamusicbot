@@ -77,12 +77,12 @@ __HELP__ = f"""
 # Add Sudo Users!
 
 
-@app.on_message(filters.command("maddsudo") & filters.user(OWNER_ID))
+@app.on_message(filters.command("addsudo") & filters.user(OWNER_ID))
 async def useradd(_, message: Message):
     if not message.reply_to_message:
         if len(message.command) != 2:
             await message.reply_text(
-                "Reply to a user's message or give username/muser_id."
+                "Reply to a user's message or give username/user_id."
             )
             return
         user = message.text.split(None, 1)[1]
@@ -117,12 +117,12 @@ async def useradd(_, message: Message):
     return
 
 
-@app.on_message(filters.command("mdelsudo") & filters.user(OWNER_ID))
+@app.on_message(filters.command("delsudo") & filters.user(OWNER_ID))
 async def userdel(_, message: Message):
     if not message.reply_to_message:
         if len(message.command) != 2:
             await message.reply_text(
-                "Reply to a user's message or give username/muser_id."
+                "Reply to a user's message or give username/user_id."
             )
             return
         user = message.text.split(None, 1)[1]
