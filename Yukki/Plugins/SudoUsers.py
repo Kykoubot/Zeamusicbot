@@ -77,12 +77,12 @@ __HELP__ = f"""
 # Add Sudo Users!
 
 
-@app.on_message(filters.command("addsudo") & filters.user(OWNER_ID))
+@app.on_message(filters.command("maddsudo") & filters.user(OWNER_ID))
 async def useradd(_, message: Message):
     if not message.reply_to_message:
         if len(message.command) != 2:
             await message.reply_text(
-                "Reply to a user's message or give username/user_id."
+                "Reply to a user's message or give username/muser_id."
             )
             return
         user = message.text.split(None, 1)[1]
@@ -117,12 +117,12 @@ async def useradd(_, message: Message):
     return
 
 
-@app.on_message(filters.command("delsudo") & filters.user(OWNER_ID))
+@app.on_message(filters.command("mdelsudo") & filters.user(OWNER_ID))
 async def userdel(_, message: Message):
     if not message.reply_to_message:
         if len(message.command) != 2:
             await message.reply_text(
-                "Reply to a user's message or give username/user_id."
+                "Reply to a user's message or give username/muser_id."
             )
             return
         user = message.text.split(None, 1)[1]
@@ -426,7 +426,7 @@ async def unban_globally(_, message):
 # Broadcast Message
 
 
-@app.on_message(filters.command("broadcast_pin") & filters.user(SUDOERS))
+@app.on_message(filters.command("mbroadcast_pin") & filters.user(SUDOERS))
 async def broadcast_message_pin_silent(_, message):
     if not message.reply_to_message:
         pass
@@ -457,7 +457,7 @@ async def broadcast_message_pin_silent(_, message):
         return
     if len(message.command) < 2:
         await message.reply_text(
-            "**Usage**:\n/broadcast [MESSAGE] or [Reply to a Message]"
+            "**Usage**:\n/mbroadcast [MESSAGE] or [Reply to a Message]"
         )
         return
     text = message.text.split(None, 1)[1]
@@ -484,7 +484,7 @@ async def broadcast_message_pin_silent(_, message):
     )
 
 
-@app.on_message(filters.command("broadcast_pin_loud") & filters.user(SUDOERS))
+@app.on_message(filters.command("mbroadcast_pin_loud") & filters.user(SUDOERS))
 async def broadcast_message_pin_loud(_, message):
     if not message.reply_to_message:
         pass
@@ -515,7 +515,7 @@ async def broadcast_message_pin_loud(_, message):
         return
     if len(message.command) < 2:
         await message.reply_text(
-            "**Usage**:\n/broadcast [MESSAGE] or [Reply to a Message]"
+            "**Usage**:\n/mbroadcast [MESSAGE] or [Reply to a Message]"
         )
         return
     text = message.text.split(None, 1)[1]
@@ -542,7 +542,7 @@ async def broadcast_message_pin_loud(_, message):
     )
 
 
-@app.on_message(filters.command("broadcast") & filters.user(SUDOERS))
+@app.on_message(filters.command("mbroadcast") & filters.user(SUDOERS))
 async def broadcast(_, message):
     if not message.reply_to_message:
         pass
@@ -565,7 +565,7 @@ async def broadcast(_, message):
         return
     if len(message.command) < 2:
         await message.reply_text(
-            "**Usage**:\n/broadcast [MESSAGE] or [Reply to a Message]"
+            "**Usage**:\n/mbroadcast [MESSAGE] or [Reply to a Message]"
         )
         return
     text = message.text.split(None, 1)[1]
