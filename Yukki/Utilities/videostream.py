@@ -52,7 +52,7 @@ async def start_stream_video(message, file, title, mystic):
         final_output = await message.reply_photo(
             photo="Utils/Telegram.JPEG",
             caption=(
-                f"🎬<b>__Video:__ </b> [Given Video Via Telegram]({link})\n\n👤<b>__Requested by:__ </b>{message.from_user.mention} \n🚧<b>__Queued at:__</b> <b>#{position}!</b>"
+                f"🎬<b>__Video:__ </b> [Diberikan Video Via Telegram]({link})\n\n👤<b>__Diminta oleh:__ </b>{message.from_user.mention} \n🚧<b>__Antri di:__</b> <b>#{position}!</b>"
             ),
             reply_markup=audio_markup2,
         )
