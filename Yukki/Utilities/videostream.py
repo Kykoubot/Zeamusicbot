@@ -61,7 +61,7 @@ async def start_stream_video(message, file, title, mystic):
     else:
         if not await join_video_stream(message.chat.id, file, 720):
             return await mystic.edit(
-                "Error Joining Voice Chat. Make sure Voice Chat is Enabled."
+                "🥺 Kesalahan Bergabung dengan Obrolan Suara. Pastikan Obrolan Suara Diaktifkan."
             )
         get_queue[message.chat.id] = []
         got_queue = get_queue.get(message.chat.id)
@@ -75,7 +75,7 @@ async def start_stream_video(message, file, title, mystic):
         await add_active_video_chat(message.chat.id)
         buttons = secondary_markup2("Smex1", message.from_user.id)
         await mystic.delete()
-        cap = f"🎥<b>__Playing:__ </b>[Given Video Via Telegram]({link})\n👤**__Requested by:__** {message.from_user.mention}"
+        cap = f"🎥<b>__Playing:__ </b>[Diberikan Video Via Telegram]({link})\n👤**__Diminta oleh:__** {message.from_user.mention}"
         final_output = await message.reply_photo(
             photo="Utils/Telegram.JPEG",
             reply_markup=InlineKeyboardMarkup(buttons),
@@ -112,13 +112,13 @@ async def start_live_stream(
         CallbackQuery.message.chat.id, link, quality
     ):
         return await CallbackQuery.message.reply_text(
-            f"Error Joining Voice Chat."
+            f"🥺 Kesalahan Bergabung dengan Obrolan Suara."
         )
     await music_on(CallbackQuery.message.chat.id)
     await add_active_chat(CallbackQuery.message.chat.id)
     await add_active_video_chat(CallbackQuery.message.chat.id)
     buttons = secondary_markup2(videoid, CallbackQuery.from_user.id)
-    cap = f"**Live Streaming**\n\n🎥<b>__Playing:__ </b>[{title[:25]}](https://www.youtube.com/watch?v={videoid}) \n💡<b>__Info:__</b> [Get Additional Information](https://t.me/{BOT_USERNAME}?start=info_{videoid})\n👤**__Requested by:__** {CallbackQuery.from_user.mention}"
+    cap = f"**Siaran Langsung**\n\n🎥<b>__Bermain:__ </b>[{title[:25]}](https://www.youtube.com/watch?v={videoid}) \n💡<b>__Info:__</b> [Dapatkan Informasi Tambahan](https://t.me/{BOT_USERNAME}?start=info_{videoid})\n👤**__Diminta oleh:__** {CallbackQuery.from_user.mention}"
     final_output = await CallbackQuery.message.reply_photo(
         photo=thumb,
         reply_markup=InlineKeyboardMarkup(buttons),
@@ -184,7 +184,7 @@ async def start_video_stream(
             CallbackQuery.message.chat.id, link, quality
         ):
             return await CallbackQuery.message.reply_text(
-                f"Error Joining Voice Chat."
+                f"🥺 Kesalahan Bergabung dengan Obrolan Suara."
             )
         get_queue[CallbackQuery.message.chat.id] = []
         got_queue = get_queue.get(CallbackQuery.message.chat.id)
@@ -200,7 +200,7 @@ async def start_video_stream(
         buttons = primary_markup(
             videoid, CallbackQuery.from_user.id, duration_min, duration_min
         )
-        cap = f"**Video Streaming**\n\n🎥<b>__Playing:__ </b>[{title[:25]}](https://www.youtube.com/watch?v={videoid}) \n💡<b>__Info:__</b> [Get Additional Information](https://t.me/{BOT_USERNAME}?start=info_{videoid})\n👤**__Requested by:__** {CallbackQuery.from_user.mention}"
+        cap = f"**Streaming Video**\n\n🎥<b>__Playing:__ </b>[{title[:25]}](https://www.youtube.com/watch?v={videoid}) \n💡<b>__Info:__</b> [Get Additional Information](https://t.me/{BOT_USERNAME}?start=info_{videoid})\n👤**__Requested by:__** {CallbackQuery.from_user.mention}"
         final_output = await CallbackQuery.message.reply_photo(
             photo=thumb,
             reply_markup=InlineKeyboardMarkup(buttons),
