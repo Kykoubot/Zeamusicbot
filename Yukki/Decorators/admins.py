@@ -80,7 +80,7 @@ def ActualAdminCB(mystic):
         )
         if not a.can_manage_voice_chats:
             return await CallbackQuery.answer(
-                "Anda tidak memiliki izin yang diperlukan untuk melakukan tindakan ini.\nIzin: MENGELOLA VOICE CHATS"Anda tidak memiliki izin yang diperlukan untuk melakukan tindakan ini.\nIzin: MENGELOLA VOICE CHATS",
+                "Anda tidak memiliki izin yang diperlukan untuk melakukan tindakan ini.\nIzin: MENGELOLA VOICE CHATS",
                 show_alert=True,
             )
         return await mystic(_, CallbackQuery)
