@@ -38,12 +38,12 @@ HELPABLE = {}
 
 async def initiate_bot():
     with console.status(
-        "[magenta] Finalizing Booting...",
+        "[magenta] Menyelesaikan Booting...",
     ) as status:
         ass_count = len(random_assistant)
         if ass_count == 0:
             console.print(
-                f"\n[red] No Assistant Clients Vars Defined!.. Exiting Process"
+                f"\n[red] Tidak Ada Asisten Klien yang Ditentukan Vars!.. Proses Keluar"
             )
             return
         try:
@@ -61,11 +61,11 @@ async def initiate_bot():
         except Exception as e:
             pass
         status.update(
-            status="[bold blue]Scanning for Plugins", spinner="earth"
+            status="[bold blue]Memindai Plugin", spinner="earth"
         )
         console.print("Found {} Plugins".format(len(ALL_MODULES)) + "\n")
         status.update(
-            status="[bold red]Importing Plugins...",
+            status="[bold red]Mengimpor Plugin...",
             spinner="bouncingBall",
             spinner_style="yellow",
         )
@@ -86,14 +86,14 @@ async def initiate_bot():
                         imported_module.__MODULE__.lower()
                     ] = imported_module
             console.print(
-                f">> [bold cyan]Successfully imported: [green]{all_module}.py"
+                f">> [bold cyan]Berhasil diimpor: [green]{all_module}.py"
             )
         console.print("")
         status.update(
-            status="[bold blue]Importation Completed!",
+            status="[bold blue]Impor Selesai!",
         )
     console.print(
-        "[bold green]Congrats!! Zebo Music Bot has started successfully!\n"
+        "[bold green]Congrats!! Zebo Music Bot telah dimulai dengan sukses!\n"
     )
     try:
         await app.send_message(
@@ -121,7 +121,7 @@ async def initiate_bot():
             )
         except Exception as e:
             print(
-                "\nAssistant Account 1 has failed to access the log Channel. Make sure that you have added your Assistant to your log channel and promoted as admin!"
+                "\nAkun Asisten 1 gagal mengakses saluran log. Pastikan Anda telah menambahkan Asisten Anda ke saluran log Anda dan dipromosikan sebagai admin!"
             )
             console.print(f"\n[red]Stopping Bot")
             return
@@ -202,11 +202,11 @@ async def initiate_bot():
             console.print(f"\n[red]Stopping Bot")
             return
         try:
-            await ASS_CLI_5.join_chat("OfficialYukki")
-            await ASS_CLI_5.join_chat("YukkiSupport")
+            await ASS_CLI_5.join_chat("storezeastore")
+            await ASS_CLI_5.join_chat("dbzea")
         except:
             pass
-        console.print(f"├[red] Assistant 5 Started as {ASSNAME5}!")
+        console.print(f"├[red] Asisten 5 Dimulai sebagai {ASSNAME5}!")
         console.print(f"├[green] ID :- {ASSID5}!")
     if LOG_SESSION != "None":
         try:
@@ -216,7 +216,7 @@ async def initiate_bot():
             )
         except Exception as e:
             print(
-                "\nLogger Client has failed to access the log Channel. Make sure that you have added your Logger Account to your log channel and promoted as admin!"
+                "\nLogger Klien telah gagal mengakses Saluran log. Pastikan Anda telah menambahkan Akun Logger Anda ke saluran log Anda dan dipromosikan sebagai admin!"
             )
             console.print(f"\n[red]Stopping Bot")
             return
@@ -225,7 +225,7 @@ async def initiate_bot():
             await LOG_CLIENT.join_chat("dbzea")
         except:
             pass
-    console.print(f"└[red] Yukki Music Bot Boot Completed.")
+    console.print(f"└[red] Zebo Music Bot Boot Completed.")
     if STRING1 != "None":
         await pytgcalls1.start()
     if STRING2 != "None":
@@ -241,10 +241,10 @@ async def initiate_bot():
 
 
 home_text_pm = f"""Hello🥰 ,
-My name is {BOT_NAME}.
-A Telegram Music+Video Streaming bot with some useful features.
+Saya {BOT_NAME}.
+Bot Telegram Music+Video Streaming dengan beberapa fitur berguna.
 
-All commands can be used with: / """
+Semua perintah dapat digunakan dengan: / """
 
 
 @app.on_message(filters.command("help") & filters.private)
@@ -309,7 +309,7 @@ async def start_command(_, message):
                 reply_markup=keyboard,
             )
         if name[0] == "i":
-            m = await message.reply_text("🔎 Fetching Info!")
+            m = await message.reply_text("🔎 Mengambil Info!")
             query = (str(name)).replace("info_", "", 1)
             query = f"https://www.youtube.com/watch?v={query}"
             results = VideosSearch(query, limit=1)
@@ -323,26 +323,26 @@ async def start_command(_, message):
                 link = result["link"]
                 published = result["publishedTime"]
             searched_text = f"""
-🔍__**Video Track Information**__
+🔍__**Informasi Pemutar Video**__
 
-❇️**Title:** {title}
+❇️**Judul:** {title}
 
-⏳**Duration:** {duration} Mins
-👀**Views:** `{views}`
-⏰**Published Time:** {published}
-🎥**Channel Name:** {channel}
-📎**Channel Link:** [Visit From Here]({channellink})
-🔗**Video Link:** [Link]({link})
+⏳**Durasi:** {duration} Mins
+👀**Penonton:** `{views}`
+⏰**Waktu Terbit:** {published}
+🎥**Nama Channel:** {channel}
+📎**Link Channel:** [Visit From Here]({channellink})
+🔗**Link Video:** [Link]({link})
 
-⚡️ __Searched Powered By {BOT_NAME}__"""
+⚡️ __Pencarian Didukung oleh {BOT_NAME}__"""
             key = InlineKeyboardMarkup(
                 [
                     [
                         InlineKeyboardButton(
-                            text="🎥 Watch Youtube Video", url=f"{link}"
+                            text="🎥 Tonton Video Youtube", url=f"{link}"
                         ),
                         InlineKeyboardButton(
-                            text="🔄 Close", callback_data="close"
+                            text="🔄 Tutup", callback_data="close"
                         ),
                     ],
                 ]
@@ -453,10 +453,10 @@ All commands can be used with: /
             [
                 [
                     InlineKeyboardButton(
-                        text="↪️ Back", callback_data="help_back"
+                        text="↪️ Kembali", callback_data="help_back"
                     ),
                     InlineKeyboardButton(
-                        text="🔄 Close", callback_data="close"
+                        text="🔄 Tutup", callback_data="close"
                     ),
                 ],
             ]
