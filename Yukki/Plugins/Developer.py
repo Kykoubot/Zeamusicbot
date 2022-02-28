@@ -22,7 +22,7 @@ from Yukki.Utilities.tasks import add_task, rm_task
 async def aexec(code, client, message):
     exec(
         "async def __aexec(client, message): "
-        + "".join(f"\n {a}" for a in code.split("\n"))
+        + "".join(f"\n {a}" untuk masuk code.split("\n"))
     )
     return await locals()["__aexec"](client, message)
 
@@ -42,7 +42,7 @@ async def edit_or_reply(msg: Message, **kwargs):
 async def executor(client, message):
     if len(message.command) < 2:
         return await edit_or_reply(
-            message, text="__Nigga Give me some command to execute.__"
+            message, text="__Nigga Beri saya beberapa perintah untuk dieksekusi.__"
         )
     try:
         cmd = message.text.split(" ", maxsplit=1)[1]
@@ -81,14 +81,14 @@ async def executor(client, message):
             [
                 [
                     InlineKeyboardButton(
-                        text="⏳", callback_data=f"runtime {t2-t1} Seconds"
+                        text="⏳", callback_data=f"waktu berjalan {t2-t1} Detik"
                     )
                 ]
             ]
         )
         await message.reply_document(
             document=filename,
-            caption=f"**INPUT:**\n`{cmd[0:980]}`\n\n**OUTPUT:**\n`Attached Document`",
+            caption=f"**INPUT:**\n`{cmd[0:980]}`\n\n**OUTPUT:**\n`Dokumen Terlampir`",
             quote=False,
             reply_markup=keyboard,
         )
@@ -101,7 +101,7 @@ async def executor(client, message):
                 [
                     InlineKeyboardButton(
                         text="⏳",
-                        callback_data=f"runtime {round(t2-t1, 3)} Seconds",
+                        callback_data=f"waktu berjalan {round(t2-t1, 3)} Detik",
                     ),
                     InlineKeyboardButton(
                         text="🗑",
