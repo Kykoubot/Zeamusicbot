@@ -61,7 +61,7 @@ async def timer_checkup_markup(_, CallbackQuery):
             dur_left = db_mem[CallbackQuery.message.chat.id]["left"]
             duration_min = db_mem[CallbackQuery.message.chat.id]["total"]
             return await CallbackQuery.answer(
-                f"Remaining {dur_left} out of {duration_min} Mins.",
+                f"Tersisa {dur_left} out of {duration_min} Mins.",
                 show_alert=True,
             )
         return await CallbackQuery.answer(f"Tidak bermain.", show_alert=True)
@@ -80,7 +80,7 @@ async def activevc(_, message: Message):
         duration_min = db_mem[message.chat.id]["total"]
         got_queue = get_queue.get(message.chat.id)
         if not got_queue:
-            await mystic.edit(f"Nothing in Queue")
+            await mystic.edit(f"Tidak ada dalam Antrian")
         fetched = []
         for get in got_queue:
             fetched.append(get)
@@ -119,7 +119,7 @@ async def activevc(_, message: Message):
         else:
             await mystic.edit(msg)
     else:
-        await message.reply_text(f"Nothing in Queue")
+        await message.reply_text(f"Tidak ada dalam Antrian")
 
 
 @app.on_message(filters.command("activevc") & filters.user(SUDOERS))
@@ -200,12 +200,12 @@ async def basffy(_, message):
         chat_id = (await app.get_chat(chat)).id
     except:
         return await message.reply_text(
-            "Add Bot to this Chat First.. Unknown Chat for the bot"
+            "Tambahkan Bot ke Obrolan ini Terlebih Dahulu.. Obrolan Tidak Dikenal untuk bot"
         )
     _assistant = await get_assistant(chat_id, "assistant")
     if not _assistant:
         return await message.reply_text(
-            "No Pre-Saved Assistant Found.\n\nYou can set Assistant Via /play inside {Chat}'s Group"
+            "Asisten Pra-Tersimpan Tidak Ditemukan.\n\nAnda dapat mengatur Asisten Via /play di dalam {Chat}'s Group"
         )
     else:
         ran_ass = _assistant["saveassistant"]
@@ -215,7 +215,7 @@ async def basffy(_, message):
     try:
         await ASS_ACC.join_chat(chat_id)
     except Exception as e:
-        await message.reply_text(f"Failed\n**Possible reason could be**:{e}")
+        await message.reply_text(f"Gagal\n**Kemungkinan alasannya bisa**:{e}")
         return
     await message.reply_text("Joined.")
 
@@ -231,10 +231,10 @@ async def baaaf(_, message):
     try:
         await app.leave_chat(chat)
     except Exception as e:
-        await message.reply_text(f"Failed\n**Possible reason could be**:{e}")
+        await message.reply_text(f"Gagal\n**Kemungkinan alasannya bisa**:{e}")
         print(e)
         return
-    await message.reply_text("Bot has left the chat successfully")
+    await message.reply_text("Bot telah berhasil meninggalkan obrolan")
 
 
 @app.on_message(filters.command("leaveassistant") & filters.user(SUDOERS))
@@ -249,12 +249,12 @@ async def baujaf(_, message):
         chat_id = (await app.get_chat(chat)).id
     except:
         return await message.reply_text(
-            "Add Bot to this Chat First.. Unknown Chat for the bot"
+            "Tambahkan Bot ke Obrolan ini Terlebih Dahulu.. Obrolan Tidak Dikenal untuk bot"
         )
     _assistant = await get_assistant(chat, "assistant")
     if not _assistant:
         return await message.reply_text(
-            "No Pre-Saved Assistant Found.\n\nYou can set Assistant Via /play inside {Chat}'s Group"
+            "Asisten Pra-Tersimpan Tidak Ditemukan.\n\n Anda dapat mengatur Asisten Via /play di dalam {Chat}'s Group"
         )
     else:
         ran_ass = _assistant["saveassistant"]
@@ -264,6 +264,6 @@ async def baujaf(_, message):
     try:
         await ASS_ACC.leave_chat(chat_id)
     except Exception as e:
-        await message.reply_text(f"Failed\n**Possible reason could be**:{e}")
+        await message.reply_text(f"Gagal\n**Kemungkinan alasannya bisa**:{e}")
         return
     await message.reply_text("Left.")
