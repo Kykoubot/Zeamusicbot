@@ -63,7 +63,7 @@ async def play_playlist_cmd(_, message):
                     userid = user.id
                     third_name = user.first_name
                 except Exception as e:
-                    return await message.reply_text("User not found")
+                    return await message.reply_text("Pengguna tidak ditemukan")
             user_id = message.from_user.id
             user_name = message.from_user.first_name
             buttons = third_playlist_markup(
@@ -72,7 +72,7 @@ async def play_playlist_cmd(_, message):
             hmo = await message.reply_photo(
                 photo=thumb,
                 caption=(
-                    f"**{MUSIC_BOT_NAME}'s Playlist Feature**\nSelect the Playlist you want to play!.\n\nYou can play someone else's playlist too:-\n- /playplaylist [Username]\n- /playplaylist [USER ID](if user has deleted acc)\n- /playplaylist [Reply to a User]"
+                    f"**{MUSIC_BOT_NAME}'s Fitur Daftar Putar**\nPilih Daftar Putar yang ingin Anda mainkan!.\n\Anda juga dapat memutar daftar putar orang lain:-\n- /playplaylist [Username]\n- /playplaylist [USER ID](jika pengguna telah menghapus acc)\n- /playplaylist [Reply to a User]"
                 ),
                 reply_markup=InlineKeyboardMarkup(buttons),
             )
@@ -84,7 +84,7 @@ async def play_playlist_cmd(_, message):
             await message.reply_photo(
                 photo=thumb,
                 caption=(
-                    f"**{MUSIC_BOT_NAME}'s Playlist Feature**\nSelect the Playlist you want to play!.\n\nYou can play someone else's playlist too:-\n- /playplaylist [Username]\n- /playplaylist [USER ID](if user has deleted acc)\n- /playplaylist [Reply to a User]"
+                    f"**{MUSIC_BOT_NAME}'s Fitur Daftar Putar**\Pilih Daftar Putar yang ingin Anda putar!.\in\Anda juga dapat memutar daftar putar orang lain:-\n- /playplaylist [Username]\n- /playplaylist [USER ID](jika pengguna telah menghapus acc)\n- /playplaylist [Reply to a User]"
                 ),
                 reply_markup=InlineKeyboardMarkup(buttons),
             )
