@@ -93,12 +93,12 @@ async def initiate_bot():
             status="[bold blue]Importation Completed!",
         )
     console.print(
-        "[bold green]Congrats!! Yukki Music Bot has started successfully!\n"
+        "[bold green]Congrats!! Zebo Music Bot has started successfully!\n"
     )
     try:
         await app.send_message(
             LOG_GROUP_ID,
-            "<b>Congrats!! Music Bot has started successfully!</b>",
+            "<b>Congrats!! Bot Musik telah dimulai dengan sukses!✨</b>",
         )
     except Exception as e:
         print(
@@ -117,7 +117,7 @@ async def initiate_bot():
         try:
             await ASS_CLI_1.send_message(
                 LOG_GROUP_ID,
-                "<b>Congrats!! Assistant Client 1  has started successfully!</b>",
+                "<b>Congrats!! Asisten Klien 1 telah berhasil dimulai!✨</b>",
             )
         except Exception as e:
             print(
@@ -126,8 +126,8 @@ async def initiate_bot():
             console.print(f"\n[red]Stopping Bot")
             return
         try:
-            await ASS_CLI_1.join_chat("OfficialYukki")
-            await ASS_CLI_1.join_chat("YukkiSupport")
+            await ASS_CLI_1.join_chat("storezeastore")
+            await ASS_CLI_1.join_chat("dbzea")
         except:
             pass
         console.print(f"├[red] Assistant 1 Started as {ASSNAME1}!")
@@ -136,7 +136,7 @@ async def initiate_bot():
         try:
             await ASS_CLI_2.send_message(
                 LOG_GROUP_ID,
-                "<b>Congrats!! Assistant Client 2 has started successfully!</b>",
+                "<b>Congrats!! Asisten Klien 2 telah berhasil dimulai!✨</b>",
             )
         except Exception as e:
             print(
@@ -145,8 +145,8 @@ async def initiate_bot():
             console.print(f"\n[red]Stopping Bot")
             return
         try:
-            await ASS_CLI_2.join_chat("OfficialYukki")
-            await ASS_CLI_2.join_chat("YukkiSupport")
+            await ASS_CLI_2.join_chat("Storezeastore")
+            await ASS_CLI_2.join_chat("dbzea")
         except:
             pass
         console.print(f"├[red] Assistant 2 Started as {ASSNAME2}!")
@@ -155,7 +155,7 @@ async def initiate_bot():
         try:
             await ASS_CLI_3.send_message(
                 LOG_GROUP_ID,
-                "<b>Congrats!! Assistant Client 3 has started successfully!</b>",
+                "<b>Congrats!! Asisten Klien 3 telah berhasil dimulai!✨</b>",
             )
         except Exception as e:
             print(
@@ -164,8 +164,8 @@ async def initiate_bot():
             console.print(f"\n[red]Stopping Bot")
             return
         try:
-            await ASS_CLI_3.join_chat("OfficialYukki")
-            await ASS_CLI_3.join_chat("YukkiSupport")
+            await ASS_CLI_3.join_chat("storezeastore")
+            await ASS_CLI_3.join_chat("dbzea")
         except:
             pass
         console.print(f"├[red] Assistant 3 Started as {ASSNAME3}!")
@@ -212,7 +212,7 @@ async def initiate_bot():
         try:
             await LOG_CLIENT.send_message(
                 LOG_GROUP_ID,
-                "<b>Congrats!! Logger Client has started successfully!</b>",
+                "<b>Congrats!! Klien Logger telah berhasil dimulai🔥!</b>",
             )
         except Exception as e:
             print(
@@ -221,8 +221,8 @@ async def initiate_bot():
             console.print(f"\n[red]Stopping Bot")
             return
         try:
-            await LOG_CLIENT.join_chat("OfficialYukki")
-            await LOG_CLIENT.join_chat("YukkiSupport")
+            await LOG_CLIENT.join_chat("storezeastore")
+            await LOG_CLIENT.join_chat("dbzea")
         except:
             pass
     console.print(f"└[red] Yukki Music Bot Boot Completed.")
@@ -240,7 +240,7 @@ async def initiate_bot():
     console.print(f"\n[red]Stopping Bot")
 
 
-home_text_pm = f"""Hello ,
+home_text_pm = f"""Hello🥰 ,
 My name is {BOT_NAME}.
 A Telegram Music+Video Streaming bot with some useful features.
 
