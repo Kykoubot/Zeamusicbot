@@ -22,7 +22,7 @@ from Yukki.Utilities.tasks import add_task, rm_task
 async def aexec(code, client, message):
     exec(
         "async def __aexec(client, message): "
-        + "".join(f"\n {a}"to enter code.split("\n"))
+        + "".join(f"\n {a}" for a in code.split("\n"))
     )
     return await locals()["__aexec"](client, message)
 
