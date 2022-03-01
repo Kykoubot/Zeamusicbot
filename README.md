@@ -45,7 +45,7 @@ Read [Docs](https://notreallyshikhar.gitbook.io/yukkimusicbot/deployment/require
 </details>
 
 <details>
-<summary><b>🔗 Deploy to Heroku</b>dashboard.heroku.com/new?template=https://github.com/Kykoubot/Zeamusicbot</summary>
+<summary><b>🔗 Deploy to Heroku</b></summary>
 <br>
 
 > Heroku has two vars[ HEROKU_API_KEY & HEROKU_APP_NAME ] for Updater to work. 
@@ -86,9 +86,9 @@ shikhar@MacBook~ $ bash start
 
 ## Contact & Support
 
-- [Telegram Channel](https://t.me/OfficialYukki)
-- [Telegram Support Group](https://t.me/OfficialYukkiSupport)
-- [Contact Owner](https://t.me/NotReallyShikhar)
+- [Telegram Channel](https://t.me/Storezeastore)
+- [Telegram Support Group](https://t.me/dbzea)
+- [Contact Owner](https://t.me/zeafeya)
 
 
 ## License
