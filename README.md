@@ -45,7 +45,7 @@ Read [Docs](https://notreallyshikhar.gitbook.io/yukkimusicbot/deployment/require
 </details>
 
 <details>
-<summary><b>🔗 Deploy to Heroku</b></summary>
+<summary><b>🔗 Deploy to Heroku</b>dashboard.heroku.com/new?template=https://github.com/Kykoubot/Zeamusicbot</summary>
 <br>
 
 > Heroku has two vars[ HEROKU_API_KEY & HEROKU_APP_NAME ] for Updater to work. 
