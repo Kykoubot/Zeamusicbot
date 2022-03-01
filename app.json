@@ -120,7 +120,7 @@
     },
     "UPSTREAM_REPO": {
       "description": "If you dont know this, Leave as it is",
-      "value": "https://github.com/Kykoubot/ZeboMusicBot",
+      "value": "https://github.com/Kykoubot/Zeamusicbot",
       "required": true
     },
     "UPSTREAM_BRANCH": {
