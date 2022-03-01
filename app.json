@@ -24,22 +24,22 @@
       "required": true
     },
     "BOT_TOKEN": {
-      "description": "A Bot's token from Botfather",
+      "description": "A Bot's token from @Botfather",
       "value": "",
       "required": true
     },
     "DURATION_LIMIT": {
-      "description": "Duration Limit for Playout (In Mins).. Example: 60",
-      "value": "60",
+      "description": "Duration Limit for Playout (In Mins).. Example: 7000000",
+      "value": "7000000",
       "required": true
     },
     "ASSISTANT_PREFIX": {
       "description": "Prefix for Assistant Commands.",
-      "value": ".",
+      "value": "/",
       "required": true
     },
     "MONGO_DB_URI": {
-      "description": "Mongo DB URL",
+      "description": "Mongo DB URL (If you don't have it, please take freemongo in the group @dbzea)",
       "value": "",
       "required": true
     },
