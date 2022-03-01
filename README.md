@@ -53,7 +53,7 @@ Read [Docs](https://notreallyshikhar.gitbook.io/yukkimusicbot/deployment/require
 > Those two vars are not Mandatory! You can leave them blank too. 
     
 <h4>Click the button below to deploy Zebo on Heroku!</h4>    
-<p><a href="https://Kykoubot/Zeamusicbot"><img src="https://img.shields.io/badge/Deploy%20To%20Heroku-blueviolet?style=for-the-badge&logo=heroku" width="200""/></a></p>
+<p><a href="https://github/deploy?template=https://github.com/Kykoubot/Zeamusicbot"><img src="https://img.shields.io/badge/Deploy%20To%20Heroku-blueviolet?style=for-the-badge&logo=heroku" width="200""/></a></p>
     
 </details>
 
