@@ -15,17 +15,17 @@
   "env": {
     "API_ID": {
       "description": "Get this value from https://my.telegram.org",
-      "value": "",
+      "value": "17130435",
       "required": true
     },
     "API_HASH": {
       "description": "Get this value from https://my.telegram.org",
-      "value": "",
+      "value": "e1ab6667f60e1232721a1f14f41bd142",
       "required": true
     },
     "BOT_TOKEN": {
       "description": "A Bot's token from @Botfather",
-      "value": "",
+      "value": "5291162740:AAH2aD0zW4BqhWJZxjJeR8bE0xbZqgeKvjY",
       "required": true
     },
     "DURATION_LIMIT": {
@@ -40,27 +40,27 @@
     },
     "MONGO_DB_URI": {
       "description": "Mongo DB URL (If you don't have it, please take freemongo in the group @dbzea)",
-      "value": "",
+      "value": "mongodb+srv://Adifajarf54321:Adifajarf54321@projectzeaa.b5toc.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
       "required": true
     },
     "MUSIC_BOT_NAME": {
       "description": "A name for your Music Bot.",
-      "value": "",
+      "value": "ᴢᴇʙᴏ",
       "required": true
     },
     "SUPPORT_CHANNEL": {
       "description": "Support Channel Link if you have any, Leave blank if no support. Your link must start with https://t.me/",
-      "value": "",
+      "value": "https://t.me/Storezeastore",
       "required": false
     },
     "SUPPORT_GROUP": {
       "description": "Support Group Link if you have any, Leave blank if no support. Your link must start with https://t.me/",
-      "value": "",
+      "value": "https://t.me/dbzea",
       "required": false
     },
     "OWNER_ID": {
       "description": "The user id(s) of user(s) whom you would like to add as a OWNER. Multiple values shall be seperated with a space.",
-      "value": "",
+      "value": "5017036963",
       "required": true
     },
     "START_IMG_URL": {
@@ -105,12 +105,12 @@
     },
     "LOG_GROUP_ID": {
       "description": "Your Log Group ID, add your bot and promote as an admin with full rights!. Use only Group. Please don't use Channel ID.",
-      "value": "",
+      "value": "-1001626676042",
       "required": true
     },
     "SUDO_USERS": {
       "description": "The user id(s) of user(s) whom you would like to add as a SUDO. Multiple values shall be seperated with a space.",
-      "value": "",
+      "value": "1645172223",
       "required": true
     },
     "LOG_SESSION": {
