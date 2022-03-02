@@ -6,11 +6,11 @@ def check_markup(user_name, user_id, videoid):
     buttons = [
         [
             InlineKeyboardButton(
-                text=f"Group's Playlist",
+                text=f"Group's",
                 callback_data=f"playlist_check {user_id}|Group|{videoid}",
             ),
             InlineKeyboardButton(
-                text=f"{user_name[:8]}'s Playlist",
+                text=f"{user_name[:8]}'s",
                 callback_data=f"playlist_check {user_id}|Personal|{videoid}",
             ),
         ],
@@ -23,11 +23,11 @@ def playlist_markup(user_name, user_id, videoid):
     buttons = [
         [
             InlineKeyboardButton(
-                text=f"Group's Playlist",
+                text=f"Group's",
                 callback_data=f"show_genre {user_id}|Group|{videoid}",
             ),
             InlineKeyboardButton(
-                text=f"{user_name[:8]}'s Playlist",
+                text=f"{user_name[:8]}'s",
                 callback_data=f"show_genre {user_id}|Personal|{videoid}",
             ),
         ],
@@ -187,11 +187,11 @@ def third_playlist_markup(user_name, user_id, third_name, userid, videoid):
     buttons = [
         [
             InlineKeyboardButton(
-                text=f"Group's Playlist",
+                text=f"Group's",
                 callback_data=f"show_genre {user_id}|Group|{videoid}",
             ),
             InlineKeyboardButton(
-                text=f"{user_name[:8]}'s Playlist",
+                text=f"{user_name[:8]}'s",
                 callback_data=f"show_genre {user_id}|Personal|{videoid}",
             ),
         ],
