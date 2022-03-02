@@ -10,7 +10,7 @@ def choose_markup(videoid, duration, user_id):
                 callback_data=f"MusicStream {videoid}|{duration}|{user_id}",
             ),
             InlineKeyboardButton(
-                text="📺 Putar Video",
+                text="🎬 Putar Video",
                 callback_data=f"Choose {videoid}|{duration}|{user_id}",
             ),
         ],
